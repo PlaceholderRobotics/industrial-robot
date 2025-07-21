@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="stable-wheel-legged">
+  <link name="back_left_wheel">
+    <inertial>
+      <origin xyz="0.147995 0.154416 -0.0917246" rpy="0 0 0" />
+      <mass value="0.354411" />
+      <inertia ixx="0.000627958" ixy="-3.95507e-06" ixz="8.82828e-20" iyy="0.000341107" iyz="-1.58968e-18" izz="0.000341052" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0464381 0.188396 -0.472277" rpy="1.65285 -2.0633e-16 -0.0137843" />
+      <geometry>
+        <mesh filename="package://assets/back_left_wheel.stl" />
+      </geometry>
+      <material name="back_left_wheel_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0464381 0.188396 -0.472277" rpy="1.65285 -2.0633e-16 -0.0137843" />
+      <geometry>
+        <mesh filename="package://assets/back_left_wheel.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="back_left_link">
+    <inertial>
+      <origin xyz="0.105938 0.172736 -0.0350368" rpy="0 0 0" />
+      <mass value="0.873469" />
+      <inertia ixx="0.00980508" ixy="-0.00528413" ixz="0.00149189" iyy="0.00442982" iyz="0.00243259" izz="0.0120736" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0890053 0.371319 -0.16" rpy="-2.90633 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_left_link.stl" />
+      </geometry>
+      <material name="back_left_link_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0890053 0.371319 -0.16" rpy="-2.90633 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_left_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="higher_axis">
+    <inertial>
+      <origin xyz="-1.38778e-17 5.55112e-17 -0.1" rpy="0 0 0" />
+      <mass value="0.770672" />
+      <inertia ixx="0.00259901" ixy="0" ixz="4.61301e-21" iyy="0.00259901" iyz="1.12714e-21" izz="6.02087e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0777817 -0.304056 -0.1" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/higher_axis.stl" />
+      </geometry>
+      <material name="higher_axis_material">
+        <color rgba="0.972549 0.529412 0.00392157 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0777817 -0.304056 -0.1" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/higher_axis.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="top_link">
+    <inertial>
+      <origin xyz="0.09 -0.155885 -6.87097e-18" rpy="0 0 0" />
+      <mass value="0.990555" />
+      <inertia ixx="0.00860837" ixy="0.00486203" ixz="2.83825e-20" iyy="0.00299418" iyz="5.19408e-21" izz="0.0114994" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0777817 0.304056 -6.93889e-18" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/top_link.stl" />
+      </geometry>
+      <material name="top_link_material">
+        <color rgba="0.498039 0.498039 0.498039 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0777817 0.304056 -6.93889e-18" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/top_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="top_axis">
+    <inertial>
+      <origin xyz="0 -1.11022e-16 -8.29286e-18" rpy="0 0 0" />
+      <mass value="0.269735" />
+      <inertia ixx="0.000120678" ixy="2.79534e-19" ixz="1.42138e-21" iyy="0.000120678" iyz="-6.4232e-21" izz="2.10731e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0.232393 -0.625848 2.77556e-17" rpy="-0.818818 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/top_axis.stl" />
+      </geometry>
+      <material name="top_axis_material">
+        <color rgba="0.980392 0.713725 0.00392157 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.232393 -0.625848 2.77556e-17" rpy="-0.818818 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/top_axis.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="platform">
+    <inertial>
+      <origin xyz="0.0397707 0.227634 -2.55166e-08" rpy="0 0 0" />
+      <mass value="9.57619" />
+      <inertia ixx="0.182845" ixy="-0.021794" ixz="2.62396e-09" iyy="0.0592856" iyz="1.05578e-08" izz="0.145703" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.173101 -0.751356 -3.05311e-16" rpy="-1.74533 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/body.stl" />
+      </geometry>
+      <material name="body_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.173101 -0.751356 -3.05311e-16" rpy="-1.74533 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/body.stl" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.360802 -0.561706 3.67761e-16" rpy="-1.74533 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/platform.stl" />
+      </geometry>
+      <material name="platform_material">
+        <color rgba="0.231373 0.380392 0.705882 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.360802 -0.561706 3.67761e-16" rpy="-1.74533 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/platform.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.463653 0.948499 0.208" rpy="1.15402 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/upper_arm.stl" />
+      </geometry>
+      <material name="upper_arm_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.463653 0.948499 0.208" rpy="1.15402 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/upper_arm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_elbow_axle">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.04 0.7831 0.1855" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/left_elbow_axle.stl" />
+      </geometry>
+      <material name="left_elbow_axle_material">
+        <color rgba="0.615686 0.811765 0.929412 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.04 0.7831 0.1855" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/left_elbow_axle.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="forearm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.601117 0.503492 0.198" rpy="0.748283 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/forearm.stl" />
+      </geometry>
+      <material name="forearm_material">
+        <color rgba="0.498039 0.498039 0.498039 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.601117 0.503492 0.198" rpy="0.748283 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/forearm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="revolute_15" type="revolute">
+    <origin xyz="-1.30104e-18 0 -0.0125" rpy="-2.46519e-32 1.73472e-18 1.57772e-30" />
+    <parent link="left_elbow_axle" />
+    <child link="forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_16" type="revolute">
+    <origin xyz="-0.110068 0.248625 0.0225" rpy="2.18528e-16 3.29597e-17 -0.174533" />
+    <parent link="upper_arm" />
+    <child link="left_elbow_axle" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_11" type="revolute">
+    <origin xyz="0.0494897 0.28067 0.21" rpy="-3.14159 1.2837e-16 -0.174533" />
+    <parent link="platform" />
+    <child link="upper_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <link name="right_upper_arm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.04 1.055 -0.208" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_upper_arm.stl" />
+      </geometry>
+      <material name="right_upper_arm_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.04 1.055 -0.208" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_upper_arm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_elbow_axle">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.04 0.7831 -0.2105" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_elbow_axle.stl" />
+      </geometry>
+      <material name="right_elbow_axle_material">
+        <color rgba="0.615686 0.811765 0.929412 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.04 0.7831 -0.2105" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_elbow_axle.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_forearm">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1e-09" />
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.534009 -0.574178 0.198" rpy="-2.26893 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_forearm.stl" />
+      </geometry>
+      <material name="right_forearm_material">
+        <color rgba="0.498039 0.498039 0.498039 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.534009 -0.574178 0.198" rpy="-2.26893 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/right_forearm.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="revolute_13" type="revolute">
+    <origin xyz="-3.03577e-18 0 -0.0125" rpy="3.14159 1.73472e-18 1.57772e-30" />
+    <parent link="right_elbow_axle" />
+    <child link="right_forearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_14" type="revolute">
+    <origin xyz="-1.38778e-16 0.2719 0.0025" rpy="6.4462e-17 -5.0307e-16 -0.508358" />
+    <parent link="right_upper_arm" />
+    <child link="right_elbow_axle" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_12" type="revolute">
+    <origin xyz="0.0494897 0.28067 -0.21" rpy="-3.14159 -8.67362e-17 -0.508358" />
+    <parent link="platform" />
+    <child link="right_upper_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="cylindrical_11" type="revolute">
+    <origin xyz="2.77556e-17 -1.11022e-16 -6.93889e-18" rpy="-4.69184e-17 2.77556e-17 0.751978" />
+    <parent link="top_axis" />
+    <child link="platform" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_1" type="revolute">
+    <origin xyz="0.18 -0.311769 -6.93889e-18" rpy="-3.14159 -0 -5.55112e-17" />
+    <parent link="top_link" />
+    <child link="top_axis" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_2" type="revolute">
+    <origin xyz="2.08167e-17 5.55112e-17 -0.1" rpy="-3.14159 1.21431e-17 -0.533993" />
+    <parent link="higher_axis" />
+    <child link="top_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_3" type="revolute">
+    <origin xyz="0.224806 0.366555 -0.06" rpy="-1.05818e-16 5.20417e-16 -1.87084" />
+    <parent link="back_left_link" />
+    <child link="higher_axis" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <link name="center_axis">
+    <inertial>
+      <origin xyz="-3.83537e-17 -5.55112e-17 -0.1" rpy="0 0 0" />
+      <mass value="0.770672" />
+      <inertia ixx="0.00259901" ixy="-2.88548e-19" ixz="-2.08891e-22" iyy="0.00259901" iyz="1.15325e-21" izz="6.02087e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.190919 -0.190919 -0.1" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/center_axis.stl" />
+      </geometry>
+      <material name="center_axis_material">
+        <color rgba="0.231373 0.380392 0.705882 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.190919 -0.190919 -0.1" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/center_axis.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_link">
+    <inertial>
+      <origin xyz="-0.100238 0.100238 1.85765e-19" rpy="0 0 0" />
+      <mass value="0.333617" />
+      <inertia ixx="0.00108353" ixy="0.00105186" ixz="2.82522e-21" iyy="0.00108353" iyz="-6.54616e-21" izz="0.00215456" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.190919 0.190919 0" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/front_link.stl" />
+      </geometry>
+      <material name="front_link_material">
+        <color rgba="0.647059 0.647059 0.647059 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.190919 0.190919 0" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/front_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_wheel">
+    <inertial>
+      <origin xyz="-7.02072e-18 7.07825e-18 -9.08408e-19" rpy="0 0 0" />
+      <mass value="0.490462" />
+      <inertia ixx="0.000642957" ixy="2.71284e-18" ixz="1.20365e-19" iyy="0.000642957" iyz="-6.10373e-21" izz="0.000603112" />
+    </inertial>
+    <visual>
+      <origin xyz="-6.93889e-18 6.93889e-18 0" rpy="2.10175 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/front_wheel.stl" />
+      </geometry>
+      <material name="front_wheel_material">
+        <color rgba="0.262745 0.282353 0.301961 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-6.93889e-18 6.93889e-18 0" rpy="2.10175 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/front_wheel.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="revolute_7" type="revolute">
+    <origin xyz="-0.190919 0.190919 0" rpy="3.14159 -0 0" />
+    <parent link="front_link" />
+    <child link="front_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_6" type="revolute">
+    <origin xyz="3.1225e-17 5.55112e-17 -0.1" rpy="3.14159 2.18575e-16 -0.250156" />
+    <parent link="center_axis" />
+    <child link="front_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <link name="back_right_link">
+    <inertial>
+      <origin xyz="0.0476348 0.0476348 0.0249632" rpy="0 0 0" />
+      <mass value="0.873469" />
+      <inertia ixx="0.00711745" ixy="-0.00592835" ixz="-0.00201782" iyy="0.00711745" iyz="-0.00201782" izz="0.0120736" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.190919 0.190919 -0.1" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_right_link.stl" />
+      </geometry>
+      <material name="back_right_link_material">
+        <color rgba="0.917647 0.917647 0.917647 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.190919 0.190919 -0.1" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_right_link.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="higher_axis_2">
+    <inertial>
+      <origin xyz="-4.16334e-17 0 -0.1" rpy="0 0 0" />
+      <mass value="0.770672" />
+      <inertia ixx="0.00259901" ixy="0" ixz="-4.61301e-21" iyy="0.00259901" iyz="1.12714e-21" izz="6.02087e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0777817 0.304056 -0.1" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/higher_axis.stl" />
+      </geometry>
+      <material name="higher_axis_2_material">
+        <color rgba="0.972549 0.529412 0.00392157 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0777817 0.304056 -0.1" rpy="1.5708 1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/higher_axis.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="revolute_4" type="revolute">
+    <origin xyz="-0.113137 -0.113137 0" rpy="-3.46945e-18 -6.93889e-18 0.535301" />
+    <parent link="back_right_link" />
+    <child link="higher_axis_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <link name="back_right_wheel">
+    <inertial>
+      <origin xyz="5.55112e-17 1.26514e-17 -0.0348834" rpy="0 0 0" />
+      <mass value="0.354411" />
+      <inertia ixx="0.000341052" ixy="1.89322e-20" ixz="0" iyy="0.000341052" iyz="-8.17072e-22" izz="0.000628013" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.381838 8.67362e-18 0.16" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_right_wheel.stl" />
+      </geometry>
+      <material name="back_right_wheel_material">
+        <color rgba="0.301961 0.301961 0.301961 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.381838 8.67362e-18 0.16" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="package://assets/back_right_wheel.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="revolute_9" type="revolute">
+    <origin xyz="0.190919 0.190919 0.06" rpy="3.14159 5.6552e-16 0.60049" />
+    <parent link="back_right_link" />
+    <child link="back_right_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_10" type="revolute">
+    <origin xyz="-1.9082e-17 3.1225e-17 -0.2" rpy="-3.14159 5.37764e-17 0.60049" />
+    <parent link="center_axis" />
+    <child link="back_right_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_5" type="revolute">
+    <origin xyz="0.141157 0.230162 -0.06" rpy="-2.29417e-16 3.76435e-16 -1.93602" />
+    <parent link="back_left_link" />
+    <child link="center_axis" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+  <joint name="revolute_8" type="revolute">
+    <origin xyz="0.113115 0.154897 -0.0917246" rpy="-1.5708 -1.48874 -1.58458" />
+    <parent link="back_left_wheel" />
+    <child link="back_left_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793" />
+  </joint>
+</robot>
